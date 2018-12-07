@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Grid</title>
+  <style>
+  		body{
+  			margin: 0;
+  			font-family: Arial, Helvetica, sans-serif;
+  			background: #333;
+  			color: #333;
+  			font-size: :1.1em;
+  			line-height:1.5;
+  			text-align:center;
+
+  		}
+      .grid-container{
+        display: grid;
+        grid-gap: 10px;
+        background-color: ;
+        padding:10px;
+      }
+      
+  		
+  		
+
+  		img{
+  			display: block;
+  			width: 620px;
+  			height: 400px;
+
+  		}
+  		h1, h2, h3{
+  			margin: 0;
+  			padding: 1em 0;
+
+  		}
+  		p{
+  			margin: 0;
+  			padding: 1em 0;
+
+  		}
+      #menu{
+        margin: 0;
+        padding: 0;
+      }
+      #menu li{
+        list-style: none;
+        display: inline-block;
+      }
+      #menu li a{
+        text-decoration: none;
+        position: relative;
+        color: black;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: sans-serif;
+        font-variant: small-caps;
+
+        display: block;
+        overflow: hidden;
+        transition: 0.7s all;
+        padding: 14px 30px;
+      }
+      #menu li a:before{
+        content: '';
+        width: 100%;
+        position: absolute;
+        border-bottom: 1px solid #313131;
+        bottom: 0;
+        right: 350px;
+        transition: 0.7s all;
+      }
+      #menu li a:hover:before{
+        right: 0;
+      }
+  		.btn{
+         border:none;
+         background: transparent;
+         margin: 30px auto 0;
+         display:inline-block;
+         font-size: 20px;
+  			outline: none;
+        position: relative;
+        transition: 0.3s;
+  			padding:10px;
+        color: white;
+  			}
+      .btn:before{
+        content: '';
+        border-bottom: 1px solid red;
+        padding:0 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        transition: 0.3s;
+      }
+      .btn:hover:before{
+        width: 100%;
+        padding:0;
+      }
+      .btn:active{
+        background: black;
+        color: white;
+        transition:none;
+
+      }
+      * {
+       box-sizing: border-box;
+      }
+
+      body {
+          background-color: grey;
+          padding: 10px;
+          font-family: Arial;
+      }
+
+      /* Center website */
+      .main {
+          max-width: 1000px;
+          margin: auto;
+      }
+
+      h1 {
+          font-size: 50px;
+          word-break: break-all;
+      }
+  		
+      .row {
+          margin: 8px -16px;
+      }
+      /* Add padding BETWEEN each column */
+      .row,
+      .row > .column {
+          padding: 8px;
+      }
+
+      /* Create four equal columns that floats next to each other */
+      .column {
+          float: left;
+          width: 100%;
+      }
+
+      /* Clear floats after rows */ 
+      .row:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+      /* Content */
+      .content {
+          background-color: white;
+          padding: 4px;
+      }
+
+  		#showcase{
+  			min-height: 450px;
+  			color: #fff;
+  			text-align: center;
+         font-color:black;
+  		}
+  		#showcase .bg-image {
+  			position: absolute;
+  			background:#4682B4;
+  			background-position: center;
+  			background-repeat: no-repeat;
+  			background-size: cover;
+  			width: 100%;
+  			height: 450px;
+  		
+  		}
+  		#showcase h1{
+  			padding-top: 100px;
+  			padding-bottom: 0;
+  		}
+  		#showcase .content-wrap,
+  		#section-1 .content-wrap{
+  			padding: 0 1.5em;
+
+  		}
+  		#section-1{
+  			background:#eaeaea;
+  			color: #333;
+  			padding-bottom: 2em;
+        font-variant: small-caps;
+
+
+  		}
+  		/*#section-2{
+  			padding: 2em 1em 1em;
+        background:#4682B4 ;
+  		}
+  		#section-2 ul{
+  			list-style: none;
+  			margin: auto;
+  			padding:0;
+        font-variant: small-caps;
+
+  		}
+  		#section-2 li{
+  			margin-bottom: 1em;
+  			background:black;
+  			color:#333;
+  		}*/
+      #section-a {
+        width: 100%;
+        height: auto;
+
+
+
+      }
+      #section-2 {
+        display: grid;
+        background-color: #fff;
+        color: #444;
+       justify-content: stretch;
+         
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows: minmax(200px, auto);
+      }
+
+    }
+  		.card-content{
+  			padding:1.5em;
+
+  		}
+  		#section-3{
+  			background:#fff;
+  			color:#333;
+  			padding:2em;
+  			grid-gap: 20px;
+  			
+  		}
+  		#section-4 .box{
+  			padding-bottom: 2em;
+  			color:#fff;
+
+  		}
+  		#section-4 .box:first-child{
+  			background:#2690d4;
+  			
+  		}
+  		#main-footer{
+  			padding:2em;
+  			background:#000;
+  			color:#fff;
+  			text-align: center;
+  		}
+  		#main-footer{
+  			colo nr:#fff;
+  			text-decoration: none;
+  		}
+  		
+  		/*@media screen and (min-width: 500px){
+  				.grid{
+  				display: grid;
+  				grid-template-columns: 1fr repeat(2,minmax(auto,25em)) 1fr;
+  			}
+  			#section-1 .content-text{
+  				columns: 2;
+  				column-gap: 2em;
+  			}
+  			#section-1 .content-text p {
+  				padding-top: 0;
+  			}
+
+  			.content-wrap,
+  			#section-2 {
+  				grid-column: 1 / span 4;
+          grid-row: 1 / span 3;
+  			}
+  			
+  			.boxx,
+  			#section-4 {
+  				grid-column: 2/4;
+  			}
+  			.box1, 
+  			#main-footer {
+  				grid-column: 2/4;
+  			}
+  			#section-2 {
+  				
+
+
+  				justify-content: space-around;
+  			}
+  			#section-2 li{
+  				width: 41%;
+  			}
+  		
+
+      }*/
+      @media screen and (max-width: 500px) {
+       
+    .column {
+        width: 50%;
+      }
+      .content-wrap,
+        #section-2 {
+          grid-column: 2/4;
+          grid-template-columns: 1fr;
+        }
+        #content {grid-template-areas: 'item1'
+                    '.';
+          grid-gap: 0px;
+        }
+        img { width:400px; height:200px; }
+      }
+      /* #section-2 {
+        grid-template-columns: 1fr;
+       }*/
+
+
+  	
+	}
+
+	
+  </style>
+</head>
+<body>
+ <header id="showcase" class="grid">
+ 	<div class="bg-image"></div>
+ 	<div class="content-wrap">
+
+     	<ul id="menu">
+      <ul>
+      <li>  <a href="#" >Home</a></li>
+      <li>  <a href="#" >About</a></li>
+      <li><a href="#" >Portfolio</a></li>
+      <li><a href="#" >Contact</a></li>
+      </ul>
+      </ul>
+  
+  
+ 	</div>
+ </header>
+ <main id="main">
+ 	<section id="section-1" class="grid">
+ 		<div class="content-wrap">
+ 			<h2 class="content-title">Rohan Naik</h2>
+ 			<p> Producing high quality responsive websites and exceptional user experience </p>
+ 			
+  			
+ 		</div>
+ 	</section>
+  <div class="grid-container"></div>
+ 	<section id="section-2" class="grid">
+
+    <div class="content">
+      <a href="http://webpage.pace.edu/rn06643n/assignment2/1.html">
+      <img src="1.PNG" alt="Responsive website" />
+      </a>
+      
+    </div>
+  <div class="column">
+    <div class="content">
+      <a href="http://webpage.pace.edu/rn06643n/assignment1/new%201.html">
+    <img src="2.PNG" alt="project" />
+      </a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="4.PNG" alt="LinkedIn"  />
+      
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <a href="https://ijcsit.com/docs/Volume%207/vol7issue4/ijcsit2016070463.pdf">
+    <img src="3.PNG" alt="Project" />
+      </a>
+    </div>
+
+  </div>
+ 		
+ 	</section>
+ 	<section id="section-3" class="grid">
+ 		<div class="content-wrap">
+      <a href="https://www.linkedin.com/in/rohan-naik-398ba6158/">
+ 			<h2 class="content-title">Linked In</h2></a>
+ 			<p>Programming Languages: Java, Python, HTML, CSS, JavaScript.
+      Operating Systems: Windows, Linux.
+      Database: MySQL. 
+      Tools: Android Studio, Github.
+      </p>	
+ 		</div>
+
+ 	</section>
+  <section id="section-3" class="grid">
+    <div class="content-wrap">
+      <h2 class="content-title">More About Us</h2>
+      <p>A front-end developer's role is to combine design and business logic to achieve a user-facing product. To do this successfully, a wide skill set is necessary to produce a quality user experience that leads to meeting business goals. With my experience I can:</p> 
+    </div>
+
+  </section>
+ 	<section id="section-4" class="grid">
+ 		<div class="boxx">
+ 			<h2 class="content-title">Contact Us</h2>
+ 			<p>Front-end Developer, author of CSS3 Foundations, and graduate of Internet Technology. Ian combines his education with 10 years commercial experience in front-end development to produce high-quality websites and exceptional user experience.</p>
+ 			<p>contact:rn06643n@pace.edu</p>
+
+ 		</div>
+ 		
+ 	</section>
+
+ </main>
+ <footer id="main-footer" class="grid">
+ 	<div class="box1"><p></p>
+
+ 	<div>Copyrights &copy 2018 Rohan Naik </div>
+ 		
+ 	</div>		
+ 	
+ </footer>
+</body>
+</html>
